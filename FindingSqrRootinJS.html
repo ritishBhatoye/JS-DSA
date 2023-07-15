@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+function binarySearch(n)
+{
+    var start=0;
+    var end=n;
+    var mid=start+(end-start)/2;
+    var ans=-1;
+    while(start<=end)
+    { 
+        var square=mid*mid;
+        if(square==n)
+        {
+            return mid;
+        }
+        if(square<n)
+        {
+            ans=mid;
+            start=mid+1;
+        }
+        if(square>n)
+        {
+            end=mid;
+        }
+        mid=start+(end-start)/2;
+    }
+    return ans;
+}
+/*
+function val(x)
+{
+    return binarySearch(x);
+}
+*/
+var print=binarySearch(49);
+var round=Math.round(print)
+document.write(round);
+</script>
+</html>

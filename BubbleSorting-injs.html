@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+ /*   const a=[];
+    var i;
+   var temp;
+var j;
+const size=prompt("Enter the size of array");
+document.write(size+"<br>"); 
+document.write('Entered elements in an array'+"<br>"); 
+for(i=0;i<size;i++)
+{
+    var arr=prompt('Enter the element in an array');
+    document.write(arr +''+"<br>");
+}
+ 
+
+    for(i=0;i<size;i++)
+{ 
+    for(j=0;j<(size-1);j++)
+    {
+        if(a[j]>a[j+1])
+        {
+temp=a[j]
+a[j]=a[j+1]
+a[j+1]=temp
+        }
+    }
+    
+}
+for(i=0;i<=size;i++)
+{
+document.write(a+"<br>");
+}
+*/
+
+
+function print(arr)
+{
+    for(var i=0;i<arr.length;i++)
+    {
+        for(var j=0;j<(arr.length-i-1);j++)
+        {
+            if(arr[j]>arr[j+1])
+            {
+                var temp=arr[j];
+                arr[j]=arr[j+1];
+                arr[j+1]=temp;
+            }
+        }
+    }
+
+    document.write(arr);
+}
+var arr=[4,2,1,5,10,6,3,8];
+print(arr);
+</script>
+</html>
